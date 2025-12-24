@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MS Hasan | WordPress & Elementor Developer</title>
+  <link rel="stylesheet" href="style.css" />
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link href="https://fonts.googleapis.com/css2?
+
+family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+
+
+</head>
+<body>
+
+<header class="hero">
+  <nav class="nav">
+    <div class="logo"><img src="logo.png"></div>
+    <a href="#contact" class="btn-outline">Contact</a>
+  </nav>
+
+  <div class="hero-content">
+    <h1>WordPress & Elementor Developer Helping Businesses Get More Leads</h1>
+    <p>I design fast, mobile-friendly WordPress websites that convert visitors into 
+
+customers.</p>
+    <div class="hero-buttons">
+      <a href="#portfolio" class="btn-primary">View Portfolio</a>
+      <a href="#contact" class="btn-secondary">Get a Free Website Review</a>
+    </div>
+  </div>
+</header>
+
+<section class="section about">
+  <h2>Why Work With Me</h2>
+  <p>
+    I help businesses build clean, conversion-focused websites using WordPress and 
+
+Elementor.
+    My focus is not just design — I align structure, performance, and user experience with 
+
+real business goals.
+  </p>
+</section>
+
+<section class="section services">
+  <h2>Services</h2>
+  <div class="grid-3">
+    <div class="card">
+      <h3>WordPress & Elementor</h3>
+      <ul>
+        <li>Full website design</li>
+        <li>Theme customization</li>
+        <li>Website redesign</li>
+        <li>Speed optimization</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>Web Development</h3>
+      <ul>
+        <li>PSD/Figma to HTML</li>
+        <li>One-page & full sites</li>
+        <li>Responsive design</li>
+        <li>Cross-browser support</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>Fixes & Improvements</h3>
+      <ul>
+        <li>Bug fixing</li>
+        <li>Layout issues</li>
+        <li>Mobile optimization</li>
+        <li>Performance tweaks</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="section portfolio" id="portfolio">
+  <h2>Recent Work</h2>
+
+  <div class="grid-2">
+    <div class="project">
+      <h4>EcoShop</h4>
+      <p>Elementor-based e-commerce demo with clean UI and fast loading.</p>
+      <a href="https://ecoshop.great-site.net" target="_blank" class="btn-outline">
+        Visit Live →
+      </a>
+    </div>
+
+    <div class="project">
+      <h4>Rex Business</h4>
+      <p>Business website focused on conversions and clarity.</p>
+      <a href="https://mdshasan.github.io/rex-business/" target="_blank" class="btn-
+
+outline">
+        Visit Live →
+      </a>
+    </div>
+
+    <div class="project">
+      <h4>Pizza Zone</h4>
+      <p>Restaurant landing page with mobile-first layout.</p>
+      <a href="https://mdshasan.github.io/pizzazone" target="_blank" class="btn-outline">
+        Visit Live →
+      </a>
+    </div>
+
+    <div class="project">
+      <h4>Medico</h4>
+      <p>Healthcare website demo with structured content and UX focus.</p>
+      <a href="https://mdshasan.github.io/medicoplus" target="_blank" class="btn-outline">
+        Visit Live →
+      </a>
+    </div>
+  </div>
+</section>
+
+
+<section class="section pricing">
+  <h2>Pricing</h2>
+  <div class="grid-3">
+    <div class="price-card">
+      <h3>Hourly</h3>
+      <p class="price">$25/hour</p>
+      <p>Best for small fixes & updates</p>
+    </div>
+    <div class="price-card featured">
+      <h3>Project Based</h3>
+      <p class="price">From $500</p>
+      <p>Full websites & redesigns</p>
+    </div>
+    <div class="price-card">
+      <h3>Monthly</h3>
+      <p class="price">$1,500/month</p>
+      <p>Ongoing support & improvements</p>
+    </div>
+  </div>
+</section>
+
+<section class="section contact" id="contact">
+  <h2>Get a Free Website Review</h2>
+  <p>
+    Tell me a little about your website or project.
+    I’ll review it and reply within 24 hours.
+  </p>
+
+  <form class="lead-form" action="https://formspree.io/f/xpqakrlv" method="POST">
+    <input type="text" name="name" placeholder="Your Name" required />
+    <input type="email" name="email" placeholder="Your Email" required />
+    <textarea name="message" placeholder="Briefly describe your project or 
+
+website"></textarea>
+    <button type="submit" class="btn-primary">Request Free Review</button>
+  </form>
+
+  <small class="form-note">
+    No spam. No phone calls. Email or Zoom only.
+  </small>
+</section>
+
+
+<footer class="footer">
+  <p>© 2025 MS Hasan. All rights reserved.</p>
+</footer>
+
+<script>
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('show');
+      }
+    });
+  });
+
+  document.querySelectorAll('.section, .card, .project, .price-card, blockquote')
+    .forEach(el => {
+      el.classList.add('fade');
+      observer.observe(el);
+    });
+</script>
+
+</body>
+</html>
