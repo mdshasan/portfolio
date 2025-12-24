@@ -1,4 +1,4 @@
-﻿
+
 
 * {
   margin: 0;
@@ -28,14 +28,98 @@ h1, h2, h3, h4 {
 p {
   max-width: 700px;
   margin: 0 auto 20px;
-  color: #555;
+  
 }
+p,
+li {
+  color: #cbd5f5;
+}
+
+
+h2 {color: #f8fafc;
+  
+}
+
+h3 {
+  color: #e5e7eb;
+}
+span,
+small {
+  color: #94a3b8;
+}
+
+
+.section {
+  padding: 100px 20px;
+}
+
+.section.about {
+  max-width: 900px;
+  margin: auto;
+  text-align: center;
+}
+
+/* SERVICES SECTION */
+.section.services {
+  background: radial-gradient(
+      1200px 400px at 50% -100px,
+      rgba(37, 99, 235, 0.12),
+      transparent
+    ),
+    #030817;
+}
+
+/* PORTFOLIO SECTION */
+.section.portfolio {
+  background: radial-gradient(
+      1000px 300px at 50% -120px,
+      rgba(14, 165, 233, 0.08),
+      transparent
+    ),
+    #020617;
+}
+
+
+
+.section h2 {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 16px;
+  letter-spacing: -0.6px;
+
+}
+
+.section p {
+  font-size: 18px;
+  line-height: 1.7;
+  
+}
+
 
 /* HERO */
 .hero {
   background: linear-gradient(135deg, #0f172a, #020617);
   color: #fff;
   padding: 40px 10% 100px;
+position: relative;
+  overflow: hidden;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  top: -40%;
+  left: -20%;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(37,99,235,0.25), transparent 60%);
+  filter: blur(80px);
+  z-index: 0;
+}
+
+.hero * {
+  position: relative;
+  z-index: 1;
 }
 
 .nav {
@@ -60,8 +144,15 @@ p {
   max-width: 700px;
 }
 
+
+.hero-content p:last-of-type {
+  color: #94a3b8;
+}
+
 .hero h1 {
   font-size: 42px;
+line-height: 1.25;
+  letter-spacing: -0.5px;
 }
 
 .hero p {
@@ -74,6 +165,37 @@ p {
   gap: 15px;
 }
 
+.hero-profile {
+  margin-top: 35px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+background: rgba(255,255,255,0.04);
+  padding: 14px 18px;
+  border-radius: 12px;
+  max-width: 360px;
+}
+
+.hero-profile img {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid rgba(255,255,255,0.2);
+}
+
+.hero-bio {
+  font-size: 14px;
+  color: #e5e7eb;
+  line-height: 1.4;
+}
+
+.hero-bio span {
+  font-size: 13px;
+  color: #cbd5e1;
+}
+
+
 /* BUTTONS */
 .btn-primary {
 border-width:0;
@@ -82,6 +204,7 @@ border-width:0;
   padding: 14px 28px;
   border-radius: 6px;
   font-weight: 600;
+box-shadow: 0 10px 25px rgba(37,99,235,0.35);
 }
 
 .btn-secondary {
@@ -89,6 +212,7 @@ border-width:0;
   color: #fff;
   padding: 14px 28px;
   border-radius: 6px;
+backdrop-filter: blur(6px);
 }
 
 .btn-outline {
@@ -98,18 +222,126 @@ border-width:0;
   color: #fff;
 }
 
+/* ABOUT SECTION */
+.section.about {
+  background: linear-gradient(180deg, #020617 0%, #030a1e 100%);
+  padding: 100px 10%;
+  position: relative;
+}
+
+/* Heading */
+.section.about h2 {
+  color: #e5e7eb;
+  font-size: 32px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+/* Accent underline */
+.section.about h2::after {
+  content: "";
+  display: block;
+  width: 64px;
+  height: 3px;
+  background: #2563eb;
+  margin: 14px auto 0;
+  border-radius: 2px;
+}
+
+/* Text */
+.section.about p {
+  color: #cbd5e1;
+  font-size: 17px;
+  line-height: 1.8;
+  max-width: 760px;
+  margin-top: 30px;
+}
+
+/* Optional soft divider at bottom */
+.section.about::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 80%;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(148, 163, 184, 0.15),
+    transparent
+  );
+  transform: translateX(-50%);
+}
+
+
 /* GRIDS */
 .grid-3 {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 30px;
+  gap: 36px;
 }
 
 .grid-2 {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 30px;
+gap: 36px;
+  
 }
+
+
+
+.services .card {
+  background: linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02));
+  border: 1px solid rgba(255,255,255,0.08);
+  backdrop-filter: blur(8px);
+  padding: 36px;
+  border-radius: 18px;
+  transition: all 0.35s ease;
+  position: relative;
+}
+
+.services .card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 18px;
+  background: linear-gradient(120deg, transparent, rgba(37,99,235,0.15), transparent);
+  opacity: 0;
+  transition: opacity 0.35s ease;
+}
+
+.services .card:hover::before {
+  opacity: 1;
+}
+
+.services .card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(37,99,235,0.4);
+}
+
+
+.services h3 {
+  font-size: 20px;
+  margin-bottom: 16px;
+  font-weight: 600;
+ color: #e5e7eb;
+}
+
+.services li {
+  color: #e5e7eb;
+  padding-left: 22px;
+  position: relative;
+}
+
+.services li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: #2563eb;
+  font-weight: bold;
+}
+
 
 /* CARDS */
 .card, .project, .price-card, blockquote {
@@ -129,17 +361,69 @@ border-width:0;
 }
 
 .project a.btn-outline {
-  display: inline-block;
-  margin-top: 15px;
+  margin-top: 20px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
   font-size: 14px;
-color:#2563eb;
+  color: #93c5fd;
+  border-color: rgba(147,197,253,0.4);
 }
 
+.project a.btn-outline:hover {
+  background: rgba(37,99,235,0.15);
+  border-color: #2563eb;
+}
+
+
+.project {
+  background: linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.02));
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 18px;
+  padding: 34px;
+  transition: all 0.35s ease;
+  position: relative;
+}
+
+.project:hover {
+  transform: translateY(-6px);
+  border-color: rgba(37,99,235,0.5);
+}
+
+.project h4 {
+  font-size: 22px;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.project p {
+  font-size: 16px;
+  color: #cbd5f5;
+  line-height: 1.6;
+}
+
+.portfolio h4 {
+  color: #f1f5f9;
+}
 
 /* PRICING */
-.price-card {
-  text-align: center;
+
+/* PRICING */
+.section.pricing {
+  background: #ffffff;
 }
+
+/* CONTACT */
+.section.contact {
+  background: linear-gradient(
+    180deg,
+    #f8fafc 0%,
+    #eef2ff 100%
+  );
+}
+
+
+
 
 .price {
   font-size: 28px;
@@ -147,27 +431,61 @@ color:#2563eb;
   color: #2563eb;
 }
 
-.featured {
-  background: #2563eb;
-  color: #fff;
+.price-card {
+  background: #ffffff;
+  padding: 35px 30px;
+  border-radius: 16px;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 10px 30px rgba(2, 6, 23, 0.06);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-.featured p:last-child{
-color:#b1a8a8;
+
+.price-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 50px rgba(2, 6, 23, 0.12);
 }
+
+.pricing .price-card h3 {
+  color: #020617; /* Deep slate / near-black */
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
 .featured .price {
   color: #fff;
 }
 
-/* TESTIMONIALS */
-blockquote {
-  font-style: italic;
+
+.price-card.featured {
+  background: linear-gradient(
+    135deg,
+    #2563eb,
+    #1d4ed8
+  );
+  color: #fff;
+  transform: scale(1.05);
+  border: none;
 }
 
-blockquote span {
-  display: block;
-  margin-top: 10px;
-  font-weight: 600;
+.price-card.featured p {
+  color: #e0e7ff;
 }
+
+
+
+/* Light section headings */
+.pricing h2,
+.contact h2 {
+  color: #020617;
+}
+
+/* Light section body text */
+.pricing p,
+.contact p {
+  color: #334155;
+}
+
 
 /* CONTACT */
 .contact {
@@ -180,14 +498,18 @@ blockquote span {
   margin: 30px auto 0;
   display: flex;
   flex-direction: column;
+background: #ffffff;
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 15px 40px rgba(2, 6, 23, 0.08);
   gap: 15px;
 }
 
 .lead-form input,
 .lead-form textarea {
   padding: 14px 16px;
-  border-radius: 8px;
-  border: 1px solid #cbd5e1;
+  border-radius: 10px;
+  border: 1px solid #d1d5db;
   font-family: inherit;
   font-size: 15px;
 }
@@ -201,6 +523,11 @@ blockquote span {
 .lead-form textarea:focus {
   outline: none;
   border-color: #2563eb;
+}
+
+.lead-form input::placeholder,
+.lead-form textarea::placeholder {
+  color: #94a3b8;
 }
 
 .form-note {
@@ -217,8 +544,12 @@ blockquote span {
   text-align: center;
   font-size: 14px;
   color: #64748b;
+background: #020617;
 }
 
+.footer p {
+  color: #94a3b8;
+}
 /* SCROLL ANIMATION */
 .fade {
   opacity: 0;
@@ -289,7 +620,11 @@ blockquote span {
   }
 
   .section {
-    padding: 60px 5%;
+    padding: 70px 18px;
+  }
+
+  .section h2 {
+    font-size: 30px;
   }
 
   .hero {
@@ -301,6 +636,15 @@ blockquote span {
     margin-top: 50px;
     max-width: 100%;
   }
+
+  .hero-profile {
+    justify-content: center;
+    text-align: left;
+margin-left: auto;
+    margin-right: auto;
+  }
+
+
 
   .hero h1 {
     font-size: 30px;
@@ -377,7 +721,13 @@ blockquote span {
 
 .logo img {
     max-width: 130px;
+image-rendering: -webkit-optimize-contrast;
+
   }
+
+
+  
+
 
   .nav {
     flex-direction: row;
